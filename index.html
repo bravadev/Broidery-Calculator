@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Embroidery Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Embroidery Calculator</h1>
+    <p>Enter the width of the embroidery area and the width of the pattern to calculate the margins.</p>
+    <script>
+      // create the form element
+      var form = document.createElement("form");
+
+      // add a text input field for the embroidery area width
+      var areaInput = document.createElement("input");
+      areaInput.type = "number";
+      areaInput.name = "areaWidth";
+      areaInput.placeholder = "Embroidery area width";
+      form.appendChild(areaInput);
+
+      // add a text input field for the embroidery pattern width
+      var patternInput = document.createElement("input");
+      patternInput.type = "number";
+      patternInput.name = "patternWidth";
+      patternInput.placeholder = "Embroidery pattern width";
+      form.appendChild(patternInput);
+
+      // add a submit button to the form
+      var button = document.createElement("button");
+      button.type = "submit";
+      button.innerHTML = "Calculate margins";
+      form.appendChild(button);
+
+      // add a container to display the results
+      var results = document.createElement("div");
+      results.id = "results";
+      form.appendChild(results);
+
+      // add the form to the page
+      document.body.appendChild(form);
+
+      // add an event listener to the form to handle the submit event
+      form.addEventListener("submit", function(event) {
+        // prevent the form from being submitted
+        event.preventDefault();
+
+        // get the values of the form fields
+        var areaWidth = Number(areaInput.value);
+        var patternWidth = Number(patternInput.value);
+
+        // calculate the margin on each side of the pattern
+        var margin = (areaWidth - patternWidth) / 2;
+
+        // display the results in the container
+        results.innerHTML = "Margin on each side: " + margin + "px";
+      });
+    </script>
+
+  </body>
+</html>

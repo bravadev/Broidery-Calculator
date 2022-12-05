@@ -1,57 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <title>Calculateur de Broderie</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>Application de broderie</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>Calculateur de Broderie</h1>
+<h1>Application de broderie</h1>
+<p>Indiquez les dimensions de la zone de broderie :</p>
 <form>
-    <label for="broderieWidth">Largeur de la zone de broderie:</label>
-    <input type="number" id="broderieWidth" />
-    <br />
-    <label for="broderieHeight">Hauteur de la zone de broderie:</label>
-    <input type="number" id="broderieHeight" />
-    <br />
-    <label for="motifOrPrenom">Voulez-vous broder un motif seul ou un prénom et un motif?</label>
-    <select id="motifOrPrenom">
-        <option value="motif">Motif seul</option>
-        <option value="prenom">Prénom et motif</option>
-    </select>
-    <br />
-    <div id="motifInfo">
-        <label for="motif">Motif à broder:</label>
-        <input type="text" id="motif" />
-        <br />
-        <label for="motifWidth">Largeur du motif:</label>
-        <input type="number" id="motifWidth" />
-        <br />
-        <label for="motifHeight">Hauteur du motif:</label>
-        <input type="number" id="motifHeight" />
-        <br />
-    </div>
-    <div id="prenomInfo" style="display: none;">
-        <label for="prenom">Prénom à broder:</label>
-        <input type="text" id="prenom" style="display: none;" />
-        <br />
-        <label for="prenomWidth">Largeur du prénom:</label>
-        <input type="number" id="prenomWidth" style="display: none;" />
-        <br />
-        <label for="prenomHeight">Hauteur du prénom:</label>
-        <input type="number" id="prenomHeight" style="display: none;" />
-        <br />
-    </div>
-    <label for="spacing">Espacement entre les éléments:</label>
-    <input type="number" id="spacing" />
-    <br />
-    <input type="submit" value="Calculer les marges" />
+    Largeur : <input type="number" id="broderieWidth"><br>
+    Hauteur : <input type="number" id="broderieHeight"><br>
+    <p>Choisissez ce que vous voulez broder :</p>
+    <input type="radio" name="choix" value="prenom" id="prenom">Prenom seul<br>
+    <input type="radio" name="choix" value="motif" id="motif">Motif et prenom<br>
+    <p id="prenomInputs" style="display:none">
+        Largeur du prenom : <input type="number" id="prenomWidth"><br>
+        Hauteur du prenom : <input type="number" id="prenomHeight"><br>
+    </p>
+    <p id="motifInputs" style="display:none">
+        Largeur du motif : <input type="number" id="motifWidth"><br>
+        Hauteur du motif : <input type="number" id="motifHeight"><br>
+        Espacement entre le motif et le prenom : <input type="number" id="espacement"><br>
+    </p>
+    <button type="button" onclick="calculateMargins()">Calculer les marges</button>
 </form>
-<div id="results">
-    <h2>Résultats</h2>
-    <p>Marge de chaque côté en largeur : <span id="margin-width"></span></p>
-    <p>Marge de chaque côté en hauteur : <span id="margin-height"></span></p>
-</div>
-<script src="app.js"></script>
+<p id="result" style="display:none">Les marges à respecter sont :</p>
+<script src="script.js"></script>
 </body>
 </html>

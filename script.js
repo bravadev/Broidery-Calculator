@@ -1,40 +1,21 @@
-function calculateMargins() {
-// récupération des valeurs des champs de formulaire
-    const broderieWidth = document.getElementById('broderieWidth').value;
-    const broderieHeight = document.getElementById('broderieHeight').value;
-    const prenomInput = document.getElementById('prenomInputs');
-    const motifInput = document.getElementById('motifInputs');
-    let prenomWidth, prenomHeight, motifWidth, motifHeight, espacement;
+// Fichier JavaScript
 
-// vérification de la sélection de l'utilisateur
-    if (document.getElementById('prenom').checked) {
-        prenomWidth = document.getElementById('prenomWidth').value;
-        prenomHeight = document.getElementById('prenomHeight').value;
-        prenomInput.style.display = 'block';
-        motifInput.style.display = 'none';
-    } else if (document.getElementById('motif').checked) {
-        prenomWidth = document.getElementById('prenomWidth').value;
-        prenomHeight = document.getElementById('prenomHeight').value;
-        motifWidth = document.getElementById('motifWidth').value;
-        motifHeight= document.getElementById('motifHeight').value;
-        espacement = document.getElementById('espacement').value;
-        prenomInput.style.display = 'block';
-        motifInput.style.display = 'block';
-    } else {
-        alert('Vous devez choisir une option pour continuer.');
-        return;
-    }
+// Récupère les données du formulaire
+const form = document.getElementById('form');
+const width = form.elements.width.value;
+const height = form.elements.height.value;
+const motif = form.elements.motif.value;
+const prenom = form.elements.prenom.value;
+const motifWidth = form.elements.motifWidth.value;
+const motifHeight = form.elements.motifHeight.value;
+const prenomWidth = form.elements.prenomWidth.value;
+const prenomHeight = form.elements.prenomHeight.value;
+const spacing = form.elements.spacing.value;
 
-// calcul des marges
-    const prenomTotalWidth = parseInt(prenomWidth) + parseInt(espacement);
-    const totalWidth = (document.getElementById('motif').checked) ? parseInt(prenomTotalWidth) + parseInt(motifWidth) : parseInt(prenomWidth);
-    const totalHeight = (document.getElementById('motif').checked) ? Math.max(parseInt(prenomHeight), parseInt(motifHeight)) : parseInt(prenomHeight);
-    const marginLeft = (broderieWidth - totalWidth) / 2;
-    const marginTop = (broderieHeight - totalHeight) / 2;
+// Calcule les marges possibles
+const marginWidth = width - (motifWidth + prenomWidth + spacing);
+const marginHeight = height - (motifHeight + prenomHeight + spacing);
 
-// affichage des résultats
-    const result = document.getElementById('result');
-    result.innerHTML = 'Les marges à respecter sont :<br>Marge gauche : ' + marginLeft + '<br>Marge haute : ' + marginTop;
-    //result.style.display = 'block';
-
-}
+// Affiche les résultats
+const result = document.getElementById('result');
+result.innerHTML = `<p>Marges en largeur : ${marginWidth}</p><p>Marges en hauteur : ${marginHeight}</p>`;

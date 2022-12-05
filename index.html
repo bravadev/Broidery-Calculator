@@ -3,6 +3,7 @@
 <head>
     <title>Application de broderie</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
 </head>
 <body>
 <h1>Application de broderie</h1>
@@ -11,20 +12,20 @@
     Largeur : <input type="number" id="broderieWidth"><br>
     Hauteur : <input type="number" id="broderieHeight"><br>
     <p>Choisissez ce que vous voulez broder :</p>
-    <input type="radio" name="choix" value="prenom" id="prenom">Prenom seul<br>
-    <input type="radio" name="choix" value="motif" id="motif">Motif et prenom<br>
+    <input type="radio" name="choix" value="prenom" id="prenom">Prénom seul<br>
+    <input type="radio" name="choix" value="motif" id="motif">Motif et prénom<br>
     <p id="prenomInputs" style="display:none">
-        Largeur du prenom : <input type="number" id="prenomWidth"><br>
-        Hauteur du prenom : <input type="number" id="prenomHeight"><br>
+        Largeur du prénom : <input type="number" id="prenomWidth"><br>
+        Hauteur du prénom : <input type="number" id="prenomHeight"><br>
     </p>
     <p id="motifInputs" style="display:none">
         Largeur du motif : <input type="number" id="motifWidth"><br>
         Hauteur du motif : <input type="number" id="motifHeight"><br>
-        Espacement entre le motif et le prenom : <input type="number" id="espacement"><br>
+        Espacement entre le motif et le prénom : <input type="number" id="espacement"><br>
     </p>
-    <button type="button" onclick="calculateMargins()">Calculer les marges</button>
+    <button type="button" onclick="calculateMargins()">Calcul</button>
 </form>
-<p id="result" style="display:none">Les marges à respecter sont :</p>
+<div id="result" >Les marges à respecter sont :</div>
 <script src="script.js"></script>
 </body>
 </html>

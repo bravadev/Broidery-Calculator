@@ -6,8 +6,53 @@ body {
 form {
   display: inline-block;
   margin-top: 20px;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
 #result {
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
   margin-top: 20px;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+button[type="button"] {
+  margin: 20px;
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  height: 50px;
+}
+
+input {
+  margin:5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input:focus {
+  border-color: #333;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.8);
+  outline: none;
+}
+
+input[type="radio"] {
+  margin: 0 10px 0 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type="radio"]:checked {
+  background: #333;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.8);
 }

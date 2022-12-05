@@ -35,6 +35,6 @@ function calculateMargins() {
 // affichage des résultats
     const result = document.getElementById('result');
     result.innerHTML = 'Les marges à respecter sont :<br>Marge gauche : ' + marginLeft + '<br>Marge haute : ' + marginTop;
-    result.style.display = 'block';
+    //result.style.display = 'block';
 
 }

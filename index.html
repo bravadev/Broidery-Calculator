@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Embroidery Calculator</title>
+    <title>Calculateur de Broderie</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Embroidery Calculator</h1>
-    <p>Enter the width of the embroidery area and the width of the pattern to calculate the margins.</p>
+    <h1>Calculateur de Broderie</h1>
+    <p>Indique la largeur de la zone de broderie et la largeur du motif pour calculer les marges.</p>
     <script>
       // create the form element
       var form = document.createElement("form");
@@ -16,20 +16,20 @@
       var areaInput = document.createElement("input");
       areaInput.type = "number";
       areaInput.name = "areaWidth";
-      areaInput.placeholder = "Embroidery area width";
+      areaInput.placeholder = "Largeur de la zone de broderie";
       form.appendChild(areaInput);
 
       // add a text input field for the embroidery pattern width
       var patternInput = document.createElement("input");
       patternInput.type = "number";
       patternInput.name = "patternWidth";
-      patternInput.placeholder = "Embroidery pattern width";
+      patternInput.placeholder = "Largeur du motif de broderie";
       form.appendChild(patternInput);
 
       // add a submit button to the form
       var button = document.createElement("button");
       button.type = "submit";
-      button.innerHTML = "Calculate margins";
+      button.innerHTML = "Calculer les marges";
       form.appendChild(button);
 
       // add a container to display the results
@@ -53,7 +53,7 @@
         var margin = (areaWidth - patternWidth) / 2;
 
         // display the results in the container
-        results.innerHTML = "Margin on each side: " + margin + "px";
+        results.innerHTML = "Marge de chaque côté : " + margin + " carreaux";
       });
     </script>
 

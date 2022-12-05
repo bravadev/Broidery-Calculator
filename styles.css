@@ -8,6 +8,14 @@ h1 {
   text-align: center;
 }
 
+
+#broderie-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
 form {
   margin-top: 20px;
 }
@@ -19,7 +27,7 @@ input[type="number"] {
   box-sizing: border-box;
 }
 
-button[type="submit"] {
+input[type="submit"] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
@@ -30,6 +38,45 @@ button[type="submit"] {
 }
 
 #results {
-  margin-top: 20px;
-  font-weight: bold;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+/* Styles pour les écrans de petite taille */
+@media only screen and (max-width: 600px) {
+  #broderie-form {
+    width: 90%;
+    padding: 10px;
+  }
+  #results {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+/* Styles pour les écrans de moyenne taille */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  #broderie-form {
+    width: 75%;
+    padding: 15px;
+  }
+  #results {
+    width: 75%;
+    padding: 15px;
+  }
+}
+
+/* Styles pour les écrans de grande taille */
+@media only screen and (min-width: 901px) {
+  #broderie-form {
+    width: 80%;
+    padding: 20px;
+  }
+  #results {
+    width: 80%;
+    padding: 20px;
+  }
 }

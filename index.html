@@ -7,21 +7,21 @@
 </head>
 <body>
 <h1>Application de broderie</h1>
-<p>Indiquez les dimensions de la zone de broderie :</p>
 <form>
-    Largeur : <input type="number" id="broderieWidth"><br>
-    Hauteur : <input type="number" id="broderieHeight"><br>
+    <p>Indiquez les dimensions de la zone de broderie :</p>
+    <label>Largeur : </label><input type="number" id="broderieWidth"><br>
+    <label>Hauteur : </label><input type="number" id="broderieHeight"><br>
     <p>Choisissez ce que vous voulez broder :</p>
     <input type="radio" name="choix" value="prenom" id="prenom">Prénom seul<br>
     <input type="radio" name="choix" value="motif" id="motif">Motif et prénom<br>
     <p id="prenomInputs" style="display:none">
-        Largeur du prénom : <input type="number" id="prenomWidth"><br>
-        Hauteur du prénom : <input type="number" id="prenomHeight"><br>
+        <label>Largeur du prénom : </label><input type="number" id="prenomWidth"><br>
+        <label>Hauteur du prénom : </label><input type="number" id="prenomHeight"><br>
     </p>
     <p id="motifInputs" style="display:none">
-        Largeur du motif : <input type="number" id="motifWidth"><br>
-        Hauteur du motif : <input type="number" id="motifHeight"><br>
-        Espacement entre le motif et le prénom : <input type="number" id="espacement"><br>
+        <label>Largeur du motif : </label><input type="number" id="motifWidth"><br>
+        <label>Hauteur du motif : </label><input type="number" id="motifHeight"><br>
+        <label>Espace entre motif et prénom : </label><input type="number" id="espacement"><br>
     </p>
     <button type="button" onclick="calculateMargins()">Calcul</button>
 </form>

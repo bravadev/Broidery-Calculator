@@ -7,20 +7,45 @@
 </head>
 <body>
 <h1>Calculateur de Broderie</h1>
-<form id="broderie-form">
-    <label>Largeur de la zone à broder :</label>
-    <input type="number" id="zone-width"/>
-    <br/>
-    <label>Hauteur de la zone à broder :</label>
-    <input type="number" id="zone-height"/>
-    <br/>
-    <label>Largeur du motif :</label>
-    <input type="number" id="motif-width"/>
-    <br/>
-    <label>Hauteur du motif :</label>
-    <input type="number" id="motif-height"/>
-    <br/>
-    <input type="submit" value="Calculer les marges"/>
+<form>
+    <label for="broderieWidth">Largeur de la zone de broderie:</label>
+    <input type="number" id="broderieWidth" />
+    <br />
+    <label for="broderieHeight">Hauteur de la zone de broderie:</label>
+    <input type="number" id="broderieHeight" />
+    <br />
+    <label for="motifOrPrenom">Voulez-vous broder un motif seul ou un prénom et un motif?</label>
+    <select id="motifOrPrenom">
+        <option value="motif">Motif seul</option>
+        <option value="prenom">Prénom et motif</option>
+    </select>
+    <br />
+    <div id="motifInfo">
+        <label for="motif">Motif à broder:</label>
+        <input type="text" id="motif" />
+        <br />
+        <label for="motifWidth">Largeur du motif:</label>
+        <input type="number" id="motifWidth" />
+        <br />
+        <label for="motifHeight">Hauteur du motif:</label>
+        <input type="number" id="motifHeight" />
+        <br />
+    </div>
+    <div id="prenomInfo" style="display: none;">
+        <label for="prenom">Prénom à broder:</label>
+        <input type="text" id="prenom" style="display: none;" />
+        <br />
+        <label for="prenomWidth">Largeur du prénom:</label>
+        <input type="number" id="prenomWidth" style="display: none;" />
+        <br />
+        <label for="prenomHeight">Hauteur du prénom:</label>
+        <input type="number" id="prenomHeight" style="display: none;" />
+        <br />
+    </div>
+    <label for="spacing">Espacement entre les éléments:</label>
+    <input type="number" id="spacing" />
+    <br />
+    <input type="submit" value="Calculer les marges" />
 </form>
 <div id="results">
     <h2>Résultats</h2>

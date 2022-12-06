@@ -1,31 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="utf-8">
     <title>Application de broderie</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
 </head>
 <body>
 <h1>Application de broderie</h1>
+
+<!-- Formulaire pour renseigner les dimensions de la zone à broder -->
 <form>
-    <p>Indiquez les dimensions de la zone de broderie :</p>
-    <label>Largeur : </label><input type="number" id="broderieWidth"><br>
-    <label>Hauteur : </label><input type="number" id="broderieHeight"><br>
-    <p>Choisissez ce que vous voulez broder :</p>
-    <input type="radio" name="choix" value="prenom" id="prenom">Prénom seul<br>
-    <input type="radio" name="choix" value="motif" id="motif">Motif et prénom<br>
-    <p id="prenomInputs" style="display:none">
-        <label>Largeur du prénom : </label><input type="number" id="prenomWidth"><br>
-        <label>Hauteur du prénom : </label><input type="number" id="prenomHeight"><br>
-    </p>
-    <p id="motifInputs" style="display:none">
-        <label>Largeur du motif : </label><input type="number" id="motifWidth"><br>
-        <label>Hauteur du motif : </label><input type="number" id="motifHeight"><br>
-        <label>Espace entre motif et prénom : </label><input type="number" id="espacement"><br>
-    </p>
-    <button type="button" onclick="calculateMargins()">Calcul</button>
+    <label>Largeur de la zone à broder :</label>
+    <input type="number" id="width-zone">
+    <label>Hauteur de la zone à broder :</label>
+    <input type="number" id="height-zone">
+    <button type="submit" id="submit-zone">Valider</button>
 </form>
-<div id="result" >Les marges à respecter sont :</div>
+
+<!-- Formulaire pour renseigner les dimensions du prénom -->
+<form>
+    <label>Largeur du prénom :</label>
+    <input type="number" id="width-prenom">
+    <label>Hauteur du prénom :</label>
+    <input type="number" id="height-prenom">
+    <button type="submit" id="submit-prenom">Valider</button>
+</form>
+
+<!-- Formulaire pour renseigner les dimensions des motifs -->
+<form>
+    <label>Largeur du motif de droite :
+        <input type="number" id="width-motif-right"></label>
+    <label>Hauteur du motif de droite :
+        <input type="number" id="height-motif-right"></label>
+    <br>
+    <label>Largeur du motif de gauche :
+        <input type="number" id="width-motif-left"></label>
+    <label>Hauteur du motif de gauche :
+        <input type="number" id="height-motif-left"></label>
+    <button type="submit" id="submit-motif">Valider</button>
+</form>
+
+<!-- Affiche les résultats -->
+<div id="results">
+    <!-- Affiche les marges autour du prénom -->
+    <p id="margins-prenom"></p>
+    <!-- Affiche la zone à broder avec la zone occupée par le prénom -->
+    <div id="zone"></div>
+    <!-- Affiche les marges autour du motif de droite -->
+    <p id="margins-motif-right"></p>
+    <!-- Affiche la zone à broder avec le motif de droite -->
+    <div id="motif-right"></div>
+    <!-- Affiche les marges autour du motif de gauche -->
+    <p id="margins-motif-left"></p>
+    <!-- Affiche la zone à broder avec le motif de gauche -->
+    <div id="motif-left"></div>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>

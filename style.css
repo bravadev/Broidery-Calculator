@@ -3,56 +3,54 @@ body {
   text-align: center;
 }
 
+h1 {
+  color: #0055a2;
+  text-transform: uppercase;
+}
+
 form {
-  display: inline-block;
-  margin-top: 20px;
-  width: 80%;
-  padding: 20px;
-  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }
 
-#result {
-  justify-content: center;
-  text-align: center;
-  display: inline-block;
-  margin-top: 20px;
-  width: 80%;
-  padding: 20px;
-  border: 1px solid #ccc;
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
-button[type="button"] {
-  margin: 20px;
-  width: 50%;
-  background-color: #4CAF50;
-  color: white;
-  height: 50px;
-}
-
-input {
-  margin:5px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+input[type="number"] {
+  width: 100px;
+  height: 30px;
   font-size: 16px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-input:focus {
-  border-color: #333;
-  box-shadow: 0 0 10px rgba(33, 150, 243, 0.8);
-  outline: none;
+button[type="submit"] {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #0055a2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-input[type="radio"] {
-  margin: 0 10px 0 0;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+#results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }
 
-input[type="radio"]:checked {
-  background: #333;
-  box-shadow: 0 0 10px rgba(33, 150, 243, 0.8);
+#zone, #motif-right, #motif-left {
+  display: inline-block;
+  border: 1px solid #333;
+}
+
+#zone .prenom, #motif-right .motif, #motif-left .motif {
+  display: inline-block;
+  border: 1px solid #333;
 }

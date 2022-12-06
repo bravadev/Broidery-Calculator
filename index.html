@@ -1,52 +1,44 @@
-<!-- Fichier HTML -->
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Application de broderie</title>
     <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
 </head>
 <body>
-<h1>Application de broderie</h1>
+    <h1>Application de broderie</h1>
 
-<form id="form">
-    <label for="width">Largeur de la zone de broderie :</label>
-    <input type="number" id="width" name="width">
+    <p>Veuillez indiquer les dimensions de la zone de broderie :</p>
+    <label for="width">Largeur :</label>
+    <input type="number" id="width" value="160">
+    <label for="height">Hauteur :</label>
+    <input type="number" id="height" value="40">
 
-    <label for="height">Hauteur de la zone de broderie :</label>
-    <input type="number" id="height" name="height">
+    <p>Veuillez indiquer les dimensions du prénom à broder :</p>
+    <label for="name-width">Largeur :</label>
+    <input type="number" id="name-width" value="80">
+    <label for="name-height">Hauteur :</label>
+    <input type="number" id="name-height" value="19">
 
-    <label for="motif">Motif à broder :</label>
-    <select id="motif" name="motif">
-        <option value="1">Motif 1</option>
-        <option value="2">Motif 2</option>
-        <option value="3">Motif 3</option>
-    </select>
+    <p>Veuillez indiquer les dimensions des motifs à placer autour du prénom :</p>
+    <label for="left-motif-width">Largeur du motif de gauche :</label>
+    <input type="number" id="left-motif-width" value="30">
+    <label for="left-motif-height">Hauteur du motif de gauche :</label>
+    <input type="number" id="left-motif-height" value="20">
+    <label for="right-motif-width">Largeur du motif de droite :</label>
+    <input type="number" id="right-motif-width" value="30">
+    <label for="right-motif-height">Hauteur du motif de droite :</label>
+    <input type="number" id="right-motif-height" value="20">
 
-    <label for="prenom">Prénom à broder :</label>
-    <input type="text" id="prenom" name="prenom">
+    <button id="calculate-margins">Calculer les marges</button>
+    <span id="total-margins">Les marges totales sont :</span>
 
-    <label for="motifWidth">Largeur du motif :</label>
-    <input type="number" id="motifWidth" name="motifWidth">
-
-    <label for="motifHeight">Hauteur du motif :</label>
-    <input type="number" id="motifHeight" name="motifHeight">
-
-    <label for="prenomWidth">Largeur du prénom :</label>
-    <input type="number" id="prenomWidth" name="prenomWidth">
-
-    <label for="prenomHeight">Hauteur du prénom :</label>
-    <input type="number" id="prenomHeight" name="prenomHeight">
-
-    <label for="spacing">Espacement entre les éléments :</label>
-    <input type="number" id="spacing" name="spacing">
-
-    <button type="submit">Calculer les marges possibles</button>
-</form>
-
-<div id="result"></div>
+    <div id="broderie-zone">
+        <div id="left-motif"></div>
+        <div id="name">Prénom</div>
+        <div id="right-motif"></div>
+    </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-

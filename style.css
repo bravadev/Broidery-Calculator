@@ -1,49 +1,134 @@
 /* Fichier CSS */
-
+/* Styles généraux de la page */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
-
+/* Styles de la page */
 h1 {
-  text-align: center;
-  padding: 1em 0;
+    text-align: center;
+    padding: 1em 0;
 }
 
 form {
-  max-width: 500px;
-  margin:0 auto;
-  text-align: center;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 form label {
-  display: block;
-  margin-bottom: 0.5em;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
 form input[type="number"],
 form input[type="text"],
 form select {
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 form button {
-  margin-top: 1em;
-  padding: 0.5em 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #eee;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #eee;
 }
 
 #result {
-  text-align: center;
-  margin-top: 1em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+/* Styles de la zone de broderie */
+#broderie-zone {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles du prénom */
+#name {
+    background-color: #fff;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Styles des motifs */
+#left-motif, #right-motif {
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+
+
+/* Styles de la zone de broderie */
+#broderie-zone {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    margin-top: 50px;
+}
+
+/* Styles des éléments de l'interface utilisateur */
+input[type="number"] {
+    width: 60px;
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+/* Styles du prénom */
+#name {
+    background-color: #fff;
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styles des motifs */
+#left-motif, #right-motif {
+    background-color: #fff;
+    border: 1px solid black;
+    width: 100%;
+}
+
+#left-motif, #name, #right-motif, #broderie-zone {
+    vertical-align: middle;
+}
+
+#left-motif, #right-motif {
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#name {
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#broderie-zone {
+    display: flex;
+    align-items: center;
 }
